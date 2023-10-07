@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  width: calc(100% - $width-sidebar);
+  background-color: $bg;
+  box-shadow: 0 5px 22px rgba($color: $black, $alpha: .25);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $z-index-header;
+}
+
+.header__left{
+  width: 60%;
+}
+.header__rigth{
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
