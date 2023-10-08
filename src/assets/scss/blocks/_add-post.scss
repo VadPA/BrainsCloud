@@ -4,14 +4,16 @@
   background-color: $secondary;
   box-shadow: 0 15px 25px rgba($color: $black, $alpha: 0.45);
   border-radius: 5px;
-
+  
   &__form {
     display: flex;
+    align-items: center;
   }
 
   &__textarea {
     display: block;
     width: 70%;
+    height: 26px;
     font-size: 1.5rem;
     color: $white;
     font-family: inherit;
@@ -23,7 +25,6 @@
     }
   }
   &__file {
-    // background: #e2c5c5 url("./../../images/icon/add-photo.svg") center no-repeat;
     input {
       display: none;
     }
@@ -49,7 +50,7 @@
 }
 .add-post__file {
   margin-right: 1.5rem;
-  background: #ebebeb url(./../../images/icon/add-photo.svg) center no-repeat;
+  background: #ebebeb url(./../../../assets/images/icon/add-photo.svg) center no-repeat;
 }
 .add-post__send {
   background-color: $blue;
@@ -57,7 +58,6 @@
       background-color: darken($color: $blue, $amount: 5%);
     }
   img {
-    // margin: 0 auto;
     padding-left: 5px;
   }
 }

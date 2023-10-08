@@ -1,0 +1,128 @@
+.post{
+  margin-bottom: 3rem;
+  padding: 2.5rem;
+  overflow: hidden;
+
+  background-color: $secondary;
+  box-shadow: 0 15px 25px rgba($color: $black, $alpha: .35);
+  border-radius: 5px;
+  
+  &__header{
+    margin: 0 0 2.5rem;
+    
+
+    &--preview{
+      margin: -2.5rem -2.5rem 2.5rem;
+    }
+  }
+  &__header-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+
+  &__content{
+    margin-bottom: 2rem;
+  }
+  &__title{
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    a {
+      color: inherit;
+      transition: color 0.3s linear;
+
+      &:hover{
+        color: darken($color: $color-text, $amount: 10%);
+      }
+    }
+
+    &--mb0{
+      margin-bottom: 0;
+    }
+  }
+
+  &__text{
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1rem; /* 150% */
+    color: $color-text;
+  }
+  
+  &__data{
+    display: flex;
+    color: $color-data;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+
+    a {
+      color: inherit;
+      transition: color 0.3s linear;
+
+      &:hover{
+        color: $color-text;
+      }
+    }
+  }
+
+  &__data-item{
+
+    &:not(:last-child)::after{
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 1.5rem;
+      position: relative;
+      // top: -0.1rem;
+      top: -1px;
+
+      border-radius: 50%;
+      background-color: #c4c4c4;
+    }
+  }
+
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__read{
+    font-size: 1.4rem;
+    color: #107eff;
+    transition: color 0.3s ease-in-out;
+
+    &:hover{
+      color: #64a7f5;
+    }
+  }
+
+  &__actions{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    font-size: 1.2rem;
+    color: rgba($color: $white, $alpha: .6);
+
+    a {
+      color: inherit;
+      transition: color 0.3s linear;
+      &:hover{
+        color: rgba($color: $white, $alpha: 1);
+      }
+    }
+  }
+}
+
