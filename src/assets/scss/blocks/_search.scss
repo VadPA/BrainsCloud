@@ -14,4 +14,7 @@
       color: rgba($color: $white, $alpha: 0.4);
     }
   }
+  @include breakpoint($tablet-bp) {
+    max-width: 32rem;
+  }
 }

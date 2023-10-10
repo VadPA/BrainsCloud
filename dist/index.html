@@ -15,7 +15,7 @@
     <title>Home</title>
   </head>
 
-  <body>
+  <body class="show-sidebar">
     <div class="page">
       <!-- Header -->
       <header class="header">
@@ -23,7 +23,7 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Home</a>
+                <a class="nav__link" href="index.html">Home</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link has-subnav" href="#">Articles</a>
@@ -47,19 +47,22 @@
               </li>
             </ul>
           </nav>
+          <button class="burger" type="button">
+            <span>open navigation</span>
+          </button>
         </div>
         <div class="header__rigth">
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Profile</a>
+                <a class="nav__link" href="profile.html">Profile</a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="#">Exit</a>
               </li>
             </ul>
           </nav>
-          <form class="search" action="/" method="post">
+          <form class="search" action="search.html" method="get">
             <input class="search__input" type="text" placeholder="Blog Search">
           </form>
         </div>
@@ -73,8 +76,37 @@
           <div class="profile">
             <!-- <img class="profile__avatar" src="https://placehold.it/100" alt="" /> -->
             <img class="profile__avatar" src="assets/images/Sav1.png" alt="" />
-            <div class="profile__name">Popov Savelii</div>
-            <div class="profile__prof">developer's frontend block</div>
+            <div class="profile__header">
+              <div class="profile__name">Popov Savelii</div>
+              <div class="profile__prof">developer's frontend block</div>
+            </div>
+          <nav class="nav nav--mobile">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="index.html">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link has-subnav" href="#">Articles</a>
+                <ul class="subnav">
+                  <li class="subnav__item">
+                    <a class="subnav__link" href="#">Creating websites</a>
+                  </li>
+                  <li class="subnav__item">
+                    <a class="subnav__link" href="#">Internet marketing</a>
+                  </li>
+                  <li class="subnav__item">
+                    <a class="subnav__link" href="#">Video Promotion</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">About Me</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Advertisement</a>
+              </li>
+            </ul>
+          </nav>
             <ul class="social">
               <li class="social__item">
                 <a href="#" class="social__link" target="_blank">
@@ -109,7 +141,7 @@
           </div><!-- /.profile ->-->
         </div><!-- /.sidebar-content ->-->
         <div class="sidebar__footer">
-          <a class="btn btn--red" href="#">My works</a>
+          <a class="btn btn--red" href="works.html">My works</a>
           <button class="btn btn--blue" type="button">Write to me</button>
         </div>
       </aside>
@@ -148,7 +180,7 @@
       class="add-post__textarea"
       name="post-text"
       placeholder="Write something"
-    >
+    >Write something
     </textarea>
     <div class="add-post__form-actions">
       <label class="add-post__file" for="add-post-file">
@@ -165,7 +197,7 @@
 <!-- post -->
 <div class="post">
   <div class="post__content">
-    <p class="post__text">
+    <p class="post__description">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fuga, qui
       aperiam asperiores perspiciatis eligendi sequi omnis libero aliquam ullam
       nulla totam soluta earum cupiditate, nemo laudantium porro aliquid
@@ -185,7 +217,7 @@
 <!-- post -->
 <article class="post">
   <div class="post__header post__header--preview">
-    <a class="post__header-link" href="#">
+    <a class="post__header-link" href="post.html">
       <img
         class="post__header-img"
         src="assets/images/post-img.jpg"
@@ -195,9 +227,9 @@
   </div>
   <div class="post__content">
     <h2 class="post__title">
-      <a href="#"> How to write code quickly and painlessly? </a>
+      <a href="post.html"> How to write code quickly and painlessly? </a>
     </h2>
-    <p class="post__text">
+    <p class="post__description">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fuga, qui
       aperiam asperiores perspiciatis eligendi sequi omnis libero aliquam ullam
       nulla totam soluta earum cupiditate, nemo laudantium porro aliquid
@@ -210,10 +242,10 @@
         <time datetime="2023-09-11 19:05">11.09.2023</time>
       </li>
       <li class="post__data-item">
-        <a href="#">creating websites</a>
+        <a href="post.html">creating websites</a>
       </li>
     </ul>
-    <a href="#" class="post__read">read more</a>
+    <a href="post.html" class="post__read">read more</a>
   </div>
 </article>
 <!-- ./post -->
@@ -243,17 +275,17 @@
         <time datetime="2023-09-01 13:35">01.09.2023</time>
       </li>
       <li class="post__data-item">
-        <a href="#">video promotion</a>
+        <a href="post.html">video promotion</a>
       </li>
     </ul>
-    <a href="#" class="post__read">leave a comment</a>
+    <a href="post.html" class="post__read">leave a comment</a>
   </div>
 </article>
 <!-- ./post -->
 <!-- post -->
 <article class="post">
   <div class="post__header post__header--preview">
-    <a class="post__header-link" href="#">
+    <a class="post__header-link" href="post.html">
       <img
         class="post__header-img"
         src="assets/images/post-img2.jpg"
@@ -263,9 +295,9 @@
   </div>
   <div class="post__content">
     <h2 class="post__title">
-      <a href="#">How I went to FrontEnd Conf 2023</a>
+      <a href="post.html">How I went to FrontEnd Conf 2023</a>
     </h2>
-    <p class="post__text">
+    <p class="post__description">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque fuga, qui
       aperiam asperiores perspiciatis eligendi sequi omnis libero aliquam ullam
       nulla totam soluta earum cupiditate, nemo laudantium porro aliquid
@@ -278,10 +310,10 @@
         <time datetime="2023-09-05 14:15">05.09.2023</time>
       </li>
       <li class="post__data-item">
-        <a href="#">the conference</a>
+        <a href="post.html">the conference</a>
       </li>
     </ul>
-    <a href="#" class="post__read">read more</a>
+    <a href="post.html" class="post__read">read more</a>
   </div>
 </article>
 <!-- ./post -->
@@ -307,7 +339,9 @@
 </div>
       </main>
     </div>
-
-    <script src="assets/js/app.js"></script>
+    <div class="modal">
+      <video class="modal__video" src=""
+      poster="https://placehold.it/420x580"></video>
+    </div>    <script src="assets/js/app.js"></script>
   </body>
 </html>

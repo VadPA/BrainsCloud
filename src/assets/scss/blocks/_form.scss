@@ -1,0 +1,84 @@
+.form {
+  &--auth{
+    max-width: 28rem;
+    margin: 0 auto;
+  }
+
+  &__group{
+    margin-bottom: 1.5rem;
+    position: relative;
+  
+    &--md{
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__line{
+      width: 0;
+      height: 1px;
+      background-color: $blue;
+  
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+  
+      transition: width 0.3s linear;
+  }
+
+  &__control{
+    display: block;
+    width: 100%;
+    padding: .5rem 0 .75rem;
+    background: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: $white;
+    border-bottom: 1px solid #3f3f3f;
+    border-radius: 0;
+    box-shadow: none;
+  
+    &::placeholder{
+      color: rgba($color: $white, $alpha: .2);
+    }
+    &:focus{
+      outline: none;
+    }
+    &:focus + .form__line{
+      width: 100%;
+    }
+    &--textarea{
+      height: 3.0rem;
+      overflow: hidden;
+      resize: none;
+    }
+  }
+  &__footer{
+    &--center{
+      text-align: center;
+    }
+  }
+  &__footer-list{
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    li {
+      margin: 0 1.5rem;
+    }
+
+    a {
+      color: $white;
+      opacity: 0.6;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+

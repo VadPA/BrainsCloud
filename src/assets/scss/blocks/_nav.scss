@@ -1,6 +1,21 @@
 .nav{
+  @include breakpoint($tablet-bp) {
+    display: none;
+  }
+
+  &--mobile{
+    display: none;
+
+    @include breakpoint($tablet-bp){
+      display: block;
+    }
+  }
+
   &__list{
     display: flex;
+    @include breakpoint($tablet-bp){
+      flex-direction: column;
+    }
   }
   &__item{
     position: relative;

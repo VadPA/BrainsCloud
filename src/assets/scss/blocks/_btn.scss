@@ -21,16 +21,28 @@
     background-color: $red;
     box-shadow: 0 7px 17px -10px rgba($color: $red, $alpha: .3);
 
-    &:hover{
+    &:hover,
+    &:focus{
       background-color: darken($color: $red, $amount: 5%);
     }
   }
   &--blue{
     background-color: $blue;
     box-shadow: 0 7px 17px -10px rgba($color: $blue, $alpha: .3);
-    &:hover{
+    &:hover,
+    &:focus{
       background-color: darken($color: $blue, $amount: 5%);
     }
+  }
+  &--rounded{
+    border-radius: 0.41em;
+  }
+  &--sm{
+    width: 7.0rem;
+    padding: 0.7em 1.00em;
+  }
+  &--md{
+    width: 13rem;
   }
 }
 
