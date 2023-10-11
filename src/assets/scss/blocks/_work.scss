@@ -8,6 +8,12 @@
   box-shadow: 0 15px 25px rgba($color: $black, $alpha: 0.35);
   border-radius: 5px;
 
+  @include breakpoint($mobile-bp){
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
   &__preview{
     width: 31rem;
 
@@ -16,6 +22,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @include breakpoint($mobile-bp){
+      width: 100%;
+      height: 20rem;
     }
   }
   &__content{
@@ -27,6 +38,13 @@
     > .btn--md {
       align-self: end;
       margin-right: 2.5rem;
+      
+      @include breakpoint($mobile-bp){
+        align-self: start;
+      }
+    }
+    @include breakpoint($mobile-bp){
+      padding: 0 1.5rem;
     }
   }
 
@@ -46,22 +64,36 @@
         color: $blue;
       }
     }
+
+    @include breakpoint($mobile-bp){
+      margin: 1.0rem 1.5rem 1rem 0;
+      line-height: 1.2;
+    }
   }
 
   &__description{
     padding-right: 2.5rem;
     margin-bottom: 1.4rem;
-    color: #D2D2D2;
+    color: $color-text;
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 300;
     line-height: 2.7rem; /* 168.75% */
+
+    @include breakpoint($mobile-bp){
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+    }
   }
   &__list{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 6.9rem;
+
+    @include breakpoint($mobile-bp){
+      margin-bottom: 3.9rem;
+    }
   }
   &__item{
     padding: .4rem .9rem;

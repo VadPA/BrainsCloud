@@ -1,1 +1,1 @@
-console.log("file 1"),console.log("file 2");
+!function(){var t=document.querySelectorAll("[data-modal]"),e=document.body,o=document.querySelectorAll(".modal__close");t.forEach((function(t){t.addEventListener("click",(function(t){var o=t.target.getAttribute("data-modal");document.getElementById(o).classList.add("show"),e.classList.add("no-scroll")}))})),o.forEach((function(t){t.addEventListener("click",(function(t){t.currentTarget.closest(".modal").classList.remove("show"),e.classList.remove("no-scroll")}))}))}();

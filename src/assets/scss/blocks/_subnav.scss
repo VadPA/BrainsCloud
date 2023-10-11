@@ -2,7 +2,7 @@
   display: none;
   width: 16.5rem;
   background-color: $blue;
-  padding-bottom: 0.7rem;
+  padding: 0.7rem 0;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 6px 8px rgba($color: $black, $alpha: .2);
   
@@ -11,22 +11,44 @@
   left: 0;
 
   @include breakpoint($tablet-bp){
+    // display: block;
     position: static;
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 1rem;
     background-color: transparent;
+  }
+  @include breakpoint($mobile-bp){
+    display: block;
+    position: static;
+    width: 100%;
   }
 
   &__item{
     padding: 0.45rem 1.2rem;
+
+    @include breakpoint($mobile-bp){
+      padding: 0.15rem 1.2rem;
+    }
   }
   &__link{
     display: block;
+    padding: .45rem 1.2rem;
     font-size: 1.2rem;
     color: $white;
     transition: background-color 0.3s ease-in-out;
     &:hover{
       background-color: darken($color: $blue, $amount: 5%)
+    }
+    @include breakpoint($tablet-bp){
+      padding-left: 0;
+      padding-right: 0;
+
+      font-size: 1.5rem;
+
+      &:hover{
+        background: none;
+        color: $blue-link;
+      }
     }
   }
 }

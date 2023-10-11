@@ -5,9 +5,11 @@
 
   &--mobile{
     display: none;
+    margin: 3rem 0;
 
     @include breakpoint($tablet-bp){
       display: block;
+      margin-bottom: 2.0rem;
     }
   }
 
@@ -27,6 +29,17 @@
         display: block;
       }
     }
+    @include breakpoint($tablet-bp){
+      &:hover{
+        .nav__link{
+          background: none;
+          color: $blue-link;
+        }
+      }
+    }
+    @include breakpoint($mobile-bp){
+      padding: 0 0.8rem;
+    }
   }
   &__link{
     display: block;
@@ -36,6 +49,15 @@
     text-transform: uppercase;
     color:$white;
     transition: background-color .2s linear;
+    
+    @include breakpoint($tablet-bp){
+      text-transform: capitalize;
+    }
+
+    @include breakpoint($mobile-bp){
+      padding: 1.0rem 0.8rem;
+    }
+
     &.has-subnav{
       position: relative;
       padding-right: 3.5rem;
@@ -49,6 +71,20 @@
         top: 48%;
         right: 1.5rem;
       }
+      @include breakpoint($tablet-bp){
+        &::after{
+          // left: 5rem;
+          right: 14.5rem;
+        }
+      }
+      @include breakpoint($mobile-bp){
+        &::after{
+          display: none;
+        }
+      }
+    }
+    @include breakpoint($tablet-bp){
+      font-size: 1.6rem;
     }
   }
 }

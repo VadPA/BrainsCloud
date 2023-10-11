@@ -2,6 +2,11 @@
   padding: 10rem 0 8rem $width-sidebar;
 
   @include breakpoint($tablet-bp) {
+    padding-top: 7rem;
     padding-left: 0;
+  }
+
+  @include breakpoint($mobile-bp){
+    padding: 5rem 0;
   }
 }

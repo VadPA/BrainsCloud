@@ -1,8 +1,18 @@
 .cabinet {
   display: flex;
 
+  @include breakpoint($mobile-bp){
+    flex-direction: column;
+    overflow: hidden;
+  }
+
   &__form {
     width: 34rem;
+    
+    @include breakpoint($mobile-bp){
+      width: 100%;
+      order: 2;
+    }
   }
   &__avatar {
     flex-grow: 1;
@@ -12,6 +22,13 @@
       display: block;
       margin-bottom: 1.5rem;
     }
+
+    @include breakpoint($mobile-bp){
+      order: 1;
+      padding-left: 0;
+      margin-bottom: 2rem;
+    }
+
   }
   &__file {
     font-size: 1.4rem;
