@@ -2,7 +2,7 @@
   display: flex;
   width: calc(100% - $width-sidebar);
   background-color: $bg;
-  box-shadow: 0 5px 22px rgba($color: $black, $alpha: .25);
+  box-shadow: 0 5px 22px rgba($color: $black, $alpha: 0.25);
   position: fixed;
   top: 0;
   right: 0;
@@ -13,13 +13,14 @@
   }
 }
 
-.header__left{
+.header__left {
   width: 60%;
+  margin-left: 2rem;
   @include breakpoint($tablet-bp) {
     width: 40%;
   }
 }
-.header__rigth{
+.header__right {
   display: flex;
   justify-content: flex-end;
   width: 40%;

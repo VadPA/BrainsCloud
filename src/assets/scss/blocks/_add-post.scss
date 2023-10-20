@@ -46,6 +46,7 @@
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
+  align-self: flex-end;
   // width: 30%;
 
   @include breakpoint($mobile-bp){

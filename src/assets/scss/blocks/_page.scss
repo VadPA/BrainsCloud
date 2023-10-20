@@ -1,36 +1,37 @@
 .page {
   overflow: hidden;
 
-  @include breakpoint($tablet-bp){
+  @include breakpoint($tablet-bp) {
     .show-sidebar & {
       position: relative;
-      &::after{
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-  
-        background-color: rgba($color: $black, $alpha: 0.85);
-  
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-      }
     }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 3rem;
     font-size: 2.1rem;
     color: $white;
-    
-    &--center{
+
+    &--center {
       text-align: center;
     }
-    @include breakpoint($mobile-bp){
+    @include breakpoint($mobile-bp) {
       margin-bottom: 1.5rem;
     }
   }
 
+  &__mask {
+    @include breakpoint($tablet-bp){
+      display: block;
+      width: 100%;
+      height: 100%;
+  
+      background-color: rgba($color: $black, $alpha: 0.85);
+  
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+  }
 }

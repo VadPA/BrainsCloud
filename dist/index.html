@@ -16,7 +16,7 @@
   </head>
 <!--  class="show-sidebar" -->
   <body>
-    <div class="page">
+    <div class="page" id="page">
       <!-- Header -->
       <header class="header">
         <div class="header__left">
@@ -47,11 +47,11 @@
               </li>
             </ul>
           </nav>
-          <button class="burger" type="button">
+          <button class="burger" type="button" id="sidebarToggle">
             <span>open navigation</span>
           </button>
         </div>
-        <div class="header__rigth">
+        <div class="header__right">
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -68,7 +68,7 @@
         </div>
       </header>
       <!-- Sidebar -->
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
           <img src="assets/images/sidebar-header.jpg" alt="" />
         </div>
@@ -188,9 +188,8 @@
       class="add-post__textarea"
       name="post-text"
       placeholder="Write something"
-    >
-Write something
-    </textarea>
+      data-autoresize
+    ></textarea>
     <div class="add-post__form-actions">
       <label class="add-post__file" for="add-post-file">
         <input type="file" id="add-post-file" />
@@ -351,8 +350,10 @@ Write something
       </main>
     </div>
     <div class="modal" id="story-modal">
-      <video class="modal__video" src=""
-      poster="https://placehold.it/420x580"></video>
+      <div class="modal__content modal__content--story">
+        <video class="modal__video" src=""
+        poster="https://placehold.it/420x580"></video>
+      </div>
     </div>    <div class="modal" id="contact-modal">
       <div class="modal__content">
         <button class="modal__close" type="button">
